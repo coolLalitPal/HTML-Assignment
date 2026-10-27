@@ -1,0 +1,192 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Profile Cards</title>
+
+    <style>
+        /* 6.1 Box Model */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #222;
+            padding-bottom: 90px;
+        }
+
+        /* 6.4 Sticky Top Bar */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #172554;
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px 15px;
+        }
+
+        /* 6.2 Profile Card */
+        .profile-card {
+            width: 300px;
+            border: 2px solid #2563eb;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 12px #00000015;
+        }
+
+        /* Round Avatar */
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #2563eb;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #dbeafe;
+            font-size: 45px;
+        }
+
+        .profile-card h2 {
+            margin-bottom: 8px;
+        }
+
+        .role {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        /* 6.3 Scrollable Bio */
+        .bio {
+            height: 100px;
+            overflow: auto;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            text-align: left;
+            line-height: 1.5;
+            background-color: #f8fafc;
+        }
+
+        /* Second Colour Version */
+        .purple-card {
+            border-color: #9333ea;
+        }
+
+        .purple-card .avatar {
+            border-color: #9333ea;
+            background-color: #f3e8ff;
+        }
+
+        .purple-card .bio {
+            background-color: #faf5ff;
+        }
+
+        .skills {
+            margin-top: 15px;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        /* 6.4 Fixed Plus Button */
+        .add-button {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 20;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background-color: #2563eb;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px #00000030;
+        }
+
+        .add-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (max-width: 400px) {
+            .profile-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Top Bar -->
+    <header class="top-bar">
+        <h1>My Profile Cards</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- First Profile Card -->
+        <div class="profile-card">
+            <div class="avatar">👨‍💻</div>
+
+            <h2>Lalit Pal</h2>
+            <p class="role">B.Tech CSE Student</p>
+
+            <div class="bio">
+                Hello! I am a Computer Science Engineering student.
+                I am learning HTML, CSS and Java.
+                I enjoy creating websites and learning new technologies.
+                My goal is to become a skilled software developer.
+                I want to improve my programming skills and work on
+                interesting projects.
+            </div>
+
+            <p class="skills">HTML | CSS | Java</p>
+        </div>
+
+        <!-- Second Profile Card -->
+        <div class="profile-card purple-card">
+            <div class="avatar">💻</div>
+
+            <h2>Coding Student</h2>
+            <p class="role">Web Developer Learner</p>
+
+            <div class="bio">
+                I love coding and designing websites.
+                I am practising CSS box model, display properties
+                and positioning.
+                I want to build responsive and user-friendly websites.
+                I also enjoy solving programming problems and
+                exploring new tools.
+            </div>
+
+            <p class="skills">Design | Coding | Learning</p>
+        </div>
+
+    </main>
+
+    <!-- Fixed Plus Button -->
+    <button class="add-button" title="Add Profile">+</button>
+
+</body>
+</html>

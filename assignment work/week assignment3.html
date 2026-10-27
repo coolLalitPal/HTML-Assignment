@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coding Club Events and Student Registration">
+    <meta name="author" content="Lalit Pal">
+    <title>Coding Club</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            margin: 0;
+            color: #222;
+        }
+
+        header {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #2459a9;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #173b70;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2459a9;
+            color: white;
+        }
+
+        tfoot {
+            background-color: #dce8fa;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .option {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .option input {
+            width: auto;
+        }
+
+        button {
+            background-color: #2459a9;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Coding Club</h1>
+        <p>Learn Coding | Build Projects | Grow Together</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome to Coding Club</h2>
+        <p>
+            Welcome to our Coding Club! We learn programming,
+            develop websites and participate in coding events.
+        </p>
+
+        <h2>Upcoming Events</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Web Development</td>
+                    <td>10 November</td>
+                    <td>Computer Lab</td>
+                </tr>
+
+                <tr>
+                    <td>Coding Competition</td>
+                    <td>15 November</td>
+                    <td>Seminar Hall</td>
+                </tr>
+
+                <tr>
+                    <td>Project Exhibition</td>
+                    <td>20 November</td>
+                    <td>Auditorium</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Events: 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2>Student Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password" required>
+
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="dob">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number">
+
+            <label>Gender:</label>
+            <div class="option">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <label>Choose Your Skills:</label>
+            <div class="option">
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="java" name="skills" value="Java">
+                <label for="java">Java</label>
+            </div>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="">Choose a course</option>
+                <option value="web">Web Development</option>
+                <option value="java">Java Programming</option>
+                <option value="python">Python Programming</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Write your message"></textarea>
+
+            <button type="submit">Submit Registration</button>
+
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Coding Club | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
